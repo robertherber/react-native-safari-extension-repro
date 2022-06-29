@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-safari-extension/build/xcodeSafariExtension/addXCConfigurationList.js b/node_modules/react-native-safari-extension/build/xcodeSafariExtension/addXCConfigurationList.js
+index a190000..d061903 100644
+--- a/node_modules/react-native-safari-extension/build/xcodeSafariExtension/addXCConfigurationList.js
++++ b/node_modules/react-native-safari-extension/build/xcodeSafariExtension/addXCConfigurationList.js
+@@ -5,7 +5,7 @@ function default_1(proj, { extensionFolder, extensionBundleIdentifier, currentPr
+     const commonBuildSettings = {
+         ASSETCATALOG_COMPILER_APPICON_NAME: "AppIcon",
+         CLANG_ENABLE_MODULES: "YES",
+-        CODE_SIGN_ENTITLEMENTS: `${extensionFolder}/${extensionFolder}.entitlements`,
++        CODE_SIGN_ENTITLEMENTS: `${extensionFolder.replace("Extension", "")}/${extensionFolder.replace("Extension", "")}.entitlements`,
+         CURRENT_PROJECT_VERSION: (0, util_1.quoted)(currentProjectVersion),
+         INFOPLIST_FILE: `${extensionFolder}/Info.plist`,
+         // LD_RUNPATH_SEARCH_PATHS: quoted("$(inherited) @executable_path/Frameworks"),
